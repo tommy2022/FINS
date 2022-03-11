@@ -3,7 +3,7 @@ import { Card, Modal, Button } from "react-bootstrap";
 
 // import { useParams } from "react-router-dom";
 
-export default function WorkoutCard({ title, subtitle, text }) {
+export default function Note({ title, subtitle, text }) {
   // const { id = "undefined" } = useParams();
   const [showModal, setShowModal] = useState(false);
   const handleClick = () => setShowModal(true);
@@ -11,14 +11,24 @@ export default function WorkoutCard({ title, subtitle, text }) {
 
   return (
     <>
-      <Card onClick={handleClick} style={{ width: "18rem", margin: "2rem" }}>
+      <Card
+        onClick={handleClick}
+        style={{
+          width: "18rem",
+          height: "18rem",
+          margin: "2rem",
+          backgroundColor: "#FFFFE0",
+        }}
+      >
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{subtitle}</Card.Subtitle>
-          <Card.Text>{text}</Card.Text>
+          <Card.Title contentEditable={true}>{title}</Card.Title>
+          <Card.Subtitle contentEditable={true} className="mb-2 text-muted">
+            {subtitle}
+          </Card.Subtitle>
+          <Card.Text contentEditable={true}>{text}</Card.Text>
         </Card.Body>
       </Card>
-      <Modal show={showModal} onHide={handleClose}>
+      {/* <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
@@ -34,7 +44,7 @@ export default function WorkoutCard({ title, subtitle, text }) {
             edit
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 }
