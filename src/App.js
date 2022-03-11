@@ -13,8 +13,8 @@ function App() {
         <Route path="/athlete" element={<Athlete />} />
         <Route path="/coach" element={<Coach />} />
       </Routes>
-      <Link to="/coach">Coach</Link>
-      <Link to="/athlete">Athlete</Link>
+      {/* <Link to="/coach">Coach</Link>
+      <Link to="/athlete">Athlete</Link> */}
     </div>
   );
 }
