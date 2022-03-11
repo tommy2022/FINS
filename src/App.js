@@ -9,11 +9,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/athlete/:id?" element={<Athlete />} />
-        <Route path="/coach/:id?" element={<Coach />} />
+        {/* <Route path="/athlete/:id?" element={<Athlete />} />
+        <Route path="/coach/:id?" element={<Coach />} /> */}
       </Routes>
-      <Link to="/coach">Coach</Link>
-      <Link to="/athlete">Athlete</Link>
+      {/* <Link to="/coach">Coach</Link>
+      <Link to="/athlete">Athlete</Link> */}
     </div>
   );
 }
