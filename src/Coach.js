@@ -11,8 +11,8 @@ export default function Coach() {
     <Container>
 
       <Row>
-        <h1>Coach Name</h1>
-        <h2>Team Name</h2>
+        <h1>Team Name</h1>
+        <h2>Coach Name</h2>
       </Row>
 
       <Row>
@@ -86,6 +86,7 @@ export default function Coach() {
       </Row>
 
       <Row>
+        <h3>Team Training Hours for this week</h3>
         <LineChart />
       </Row>
 
