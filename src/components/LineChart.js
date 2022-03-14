@@ -9,19 +9,17 @@ const LineChart = () => {
                 data={{
                     labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
                     datasets: [{
-                        label: 'Hours Awake',
-                        data: [18, 16, 13, 16, 12, 17, 13]
+                        label: 'Total training Hours',
+                        data: [10, 13, 19, 28, 40, 42, 45]
                     }]
                 }}
-                options={{
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-
-                }
+                // options={{
+                //     scales: {
+                //         y: {
+                //             beginAtZero: true
+                //         }
+                //     }
+                // }}
                 height={300}
                 width={450}
             />
