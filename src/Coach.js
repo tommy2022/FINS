@@ -30,24 +30,7 @@ export default function Coach() {
                 <th>Training Hours</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Mark Joseph</td>
-                <td>Sprints</td>
-                <td>IM, Freestyle</td>
-                <td>4.6</td>
-              </tr>
-              <tr>
-                <td>Jacob Thorton</td>
-                <td>Distance</td>
-                <td>Breaststroke</td>
-                <td>3.2</td>
-              </tr>
-              <tr>
-                <td colSpan={3}>Team</td>
-                <td>@46.2</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </Table>
         </Row>
 
