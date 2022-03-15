@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Table } from "react-bootstrap";
 import LineChart from "./components/LineChart";
-import { atheltes } from "./Constants";
+import { athletes } from "./Constants";
 
 // import { useParams } from "react-router-dom";
 
@@ -30,7 +30,20 @@ export default function Coach() {
                 <th>Training Hours</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {athletes.map((athlete) => (
+                <tr>
+                  <td>{athlete.name}</td>
+                  <td>{athlete.speciality}</td>
+                  <td>
+                    {athlete.stroke.map((stroke) => (
+                      <span>{stroke}, </span>
+                    ))}
+                  </td>
+                  <td>{athlete.hours}</td>
+                </tr>
+              ))}
+            </tbody>
           </Table>
         </Row>
 
@@ -47,22 +60,18 @@ export default function Coach() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Tim</td>
-                <td>Jones</td>
-                <td>Sprints</td>
-                <td>3.0%</td>
-              </tr>
-              <tr>
-                <td>Tony</td>
-                <td>Mack</td>
-                <td>Distance</td>
-                <td>2.8%</td>
-              </tr>
-              <tr>
-                <td colSpan={3}>Team</td>
-                <td>@0.7%</td>
-              </tr>
+              {athletes.map((athlete) => (
+                <tr>
+                  <td>{athlete.name}</td>
+                  <td>{athlete.speciality}</td>
+                  <td>
+                    {athlete.stroke.map((stroke) => (
+                      <span>{stroke}, </span>
+                    ))}
+                  </td>
+                  <td>{athlete.progression}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
         </Row>
