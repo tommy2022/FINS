@@ -1,6 +1,6 @@
-export const Sprint = "Sprint";
+export const SPR = "Sprint";
 
-export const Distance = "Distance";
+export const DIST = "Distance";
 
 export const IM = "IM";
 export const FLY = "Butterfly";
@@ -12,7 +12,7 @@ export const athletes = [
   {
     id: 1,
     name: "Mark Joseph",
-    speciality: Sprint,
+    speciality: SPR,
     stroke: [IM, FLY],
     hours: 6.6,
     progression: 0.3,
@@ -20,7 +20,7 @@ export const athletes = [
   {
     id: 2,
     name: "Jacob Thorton",
-    speciality: Distance,
+    speciality: DIST,
     stroke: [BR],
     hours: 5.2,
     progression: 1.2,
@@ -28,7 +28,7 @@ export const athletes = [
   {
     id: 3,
     name: "Tim Jones",
-    speciality: Distance,
+    speciality: DIST,
     stroke: [FR],
     hours: 8,
     progression: 1.5,
@@ -36,7 +36,7 @@ export const athletes = [
   {
     id: 4,
     name: "Tony Mack",
-    speciality: Sprint,
+    speciality: SPR,
     stroke: [IM, BK, BR],
     hours: 6,
     progression: 3.0,
