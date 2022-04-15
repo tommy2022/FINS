@@ -6,17 +6,17 @@ import Homepage from "./Homepage";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route path="/athlete" element={<Athlete />} />
-        <Route path="/coach" element={<Coach />} />
-      </Routes>
-      {/* <Link to="/coach">Coach</Link>
+    return (
+        <div className="App">
+            <Routes>
+                <Route exact path="/" element={<Homepage />} />
+                <Route path="/athlete" element={<Athlete />} />
+                <Route path="/coach" element={<Coach />} />
+            </Routes>
+            {/* <Link to="/coach">Coach</Link>
       <Link to="/athlete">Athlete</Link> */}
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
