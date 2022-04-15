@@ -10,7 +10,7 @@ export default function NavDisplay() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="\coach">Coach</Nav.Link>
-            <Nav.Link href="\athelte">Athlete</Nav.Link>
+            <Nav.Link href="\athlete">Athlete</Nav.Link>
             <Nav.Link href="\coach" className="ml-auto">
               Login
             </Nav.Link>
