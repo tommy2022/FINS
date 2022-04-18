@@ -44,7 +44,14 @@ const sprint_set = {
 };
 
 const goals = {
-  labels: ["50 Yard Free", "100 Yard Free", "50 Yard Back", "100 Yard Back", "50  Yard Fly", "100 Yard Fly"],
+  labels: [
+    "50 Yard Free",
+    "100 Yard Free",
+    "50 Yard Back",
+    "100 Yard Back",
+    "50  Yard Fly",
+    "100 Yard Fly",
+  ],
   datasets: [
     {
       label: "Best Practice Time",
@@ -62,7 +69,6 @@ const goals = {
   ],
 };
 
-
 export default function AthleteChart() {
   return (
     <>
@@ -71,7 +77,7 @@ export default function AthleteChart() {
       <div className="App">
         <Line width={1000} data={test_set} title={"Best time progression"} />
       </div>
-    <br></br>
+      <br></br>
       <h1 style={{ fontSize: 18, color: "gray" }}>Sprint Set Metrics</h1>
       <div className="App">
         <Line width={1000} data={sprint_set} title={"Best time progression"} />
