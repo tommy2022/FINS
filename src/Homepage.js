@@ -25,7 +25,7 @@ export default function Homepage() {
   const errorMsg =
     error === 1
       ? "The Email Address field is required"
-      : "Invalid username or Password";
+      : "Email Address and Password does not match";
 
   return (
     <div
