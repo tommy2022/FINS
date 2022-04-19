@@ -10,9 +10,12 @@ import Nav from "./Nav";
 export default function Athlete() {
   // const { id = "undefined" } = useParams();
   const [showModal, setShowModal] = useState(false);
+  const [showNoteModal, setNoteModal] = useState(false);
   const handleClick = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
 
+  const handleClickNote = () => setNoteModal(true);
+  const handleNoteClose = () => setNoteModal(false);
   const [workoutType, setWorkoutType] = useState("Freestyle stroke");
   const [ddistance, setDdistance] = useState("");
   const [ttitle, setTtitle] = useState("Workout");
@@ -315,7 +318,56 @@ export default function Athlete() {
             marginTop: "10px",
           }}
         >
-          <h1>SWIMMER NOTES</h1>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ minWidth: "100px" }}></div>
+            <h1>SWIMMER NOTES</h1>
+            <Button onClick={handleClickNote} style={{ marginLeft: "200px" }}>
+              Add Note
+            </Button>
+            <Modal show={showNoteModal} onHide={handleNoteClose}>
+              <Modal.Header closeButton>
+                <input
+                  style={{ border: 0, fontSize: "24px", color: "black" }}
+                  onChange={(e) => {
+                    setTtitle(e.target.value);
+                  }}
+                  placeholder={"Add your note title here"}
+                ></input>
+              </Modal.Header>
+              <Modal.Body>
+                <input
+                  style={{ border: 0, fontSize: "20px", color: "grey" }}
+                  onChange={(e) => {
+                    setSsubtitle(e.target.value);
+                  }}
+                  value={ssubtitle}
+                ></input>
+              </Modal.Body>
+              <Modal.Body>
+                <input
+                  style={{ border: 0, fontSize: "20px", color: "grey" }}
+                  onChange={(e) => {
+                    setSsubtitle(e.target.value);
+                  }}
+                  placeholder={"Add your note here"}
+                ></input>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleNoteClose}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleAdd}>
+                  Add
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
         </div>
         <div
           style={{
